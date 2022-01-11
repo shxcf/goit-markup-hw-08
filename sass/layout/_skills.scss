@@ -1,0 +1,34 @@
+.section-skills {
+  padding-top: 94px;
+  padding-bottom: 94px;
+  &__list {
+    display: flex;
+  }
+  &__item {
+    width: 270px;
+  }
+  &__icon-wrap {
+    @extend %centeredFlex;
+
+    margin-bottom: 30px;
+    height: 120px;
+    background-color: $secondary-background-color;
+  }
+  &__title {
+    margin-bottom: 10px;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    color: $title-color;
+  }
+  &__text {
+    font-size: 14px;
+    line-height: 1.7;
+  }
+}
+
+.section-skills__item {
+  &:not(:last-child) {
+    margin-right: 30px;
+  }
+}
