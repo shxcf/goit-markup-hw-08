@@ -19,13 +19,25 @@
 }
 
 .modal {
-  position: absolute;
   top: 50%;
   left: 50%;
 
   padding: 40px;
-  width: 528px;
-  min-height: 581px;
+
+  @media screen and (max-width: 1199px) {
+    position: relative;
+    max-width: 450px;
+  }
+
+  @media screen and (min-width: 480px) {
+    position: absolute;
+    width: 450px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    width: 528px;
+    min-height: 581px;
+  }
 
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -36,6 +48,7 @@
   transform: scale(1) skewy(60deg) rotate(60deg);
   transform: translate(-50%, -50%);
   transition: transform 1000ms;
+
   &__close {
     @extend %centeredFlex;
 
